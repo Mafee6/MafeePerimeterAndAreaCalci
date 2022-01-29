@@ -1,0 +1,148 @@
+<!--
+
+    Copyright 2022 Mafee
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafee Perimeter & Area Calculator v2</title>
+    <link rel="icon" href="icons/icon.png">
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js" defer></script> 
+    <script src="shortcuts.js" defer></script>
+</head>
+<body>
+    <div class="app">
+        <div class="calci">
+            <div class="output">
+                <p>Output</p>
+            </div>
+
+            <div class="ui">
+            <div class="shapestext"><h>Shapes</h></div>
+            <div class="shapes">
+                <div class="shape-list">
+                    <div class="square shape selected">
+                        <svg width="65" height="65" viewBox="0 0 65 65" fill="grey" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.125" y="0.375" width="64" height="64" rx="4"/>
+                        </svg>                        
+                    </div>
+                    <div class="rectangle shape">
+                        <svg width="65" height="65" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.25" y="11.6875" width="64" height="41.375" rx="4"/>
+                        </svg>                            
+                    </div>
+                    <div class="circle shape">
+                        <svg width="65" height="65" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32.375" cy="32.375" r="32"/>
+                        </svg>                                                    
+                    </div>
+                    <div class="equilateral-triangle shape">
+                        <svg width="64" height="65" viewBox="0 0 64 65" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M27.6699 15.875C29.5944 12.5417 34.4056 12.5417 36.3301 15.875L55.3827 48.875C57.3072 52.2083 54.9016 56.375 51.0526 56.375H12.9474C9.09843 56.375 6.69281 52.2083 8.61731 48.875L27.6699 15.875Z"/>
+                        </svg>                            
+                    </div>
+                    <div class="hexagon shape">
+                        <svg width="50" height="51" viewBox="0 0 50 51" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.69338 27.875C0.800211 26.328 0.800212 24.422 1.69338 22.875L11.1816 6.44087C12.0748 4.89387 13.7254 3.94087 15.5118 3.94087H34.4883C36.2746 3.94087 37.9252 4.89387 38.8184 6.44087L48.3066 22.875C49.1998 24.422 49.1998 26.328 48.3066 27.875L38.8184 44.3091C37.9252 45.8561 36.2746 46.8091 34.4883 46.8091H15.5118C13.7254 46.8091 12.0748 45.8561 11.1816 44.3091L1.69338 27.875Z"/>
+                        </svg>                            
+                    </div>
+                    <div class="parallelogram shape">
+                        <svg width="65" height="65" viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13.1366 14.4446C13.6742 12.8 15.2084 11.6875 16.9386 11.6875H59.1687C61.8385 11.6875 63.7589 14.2531 63.0065 16.8147L53.2038 50.1897C52.7036 51.8928 51.1409 53.0625 49.3659 53.0625H6.02838C3.3079 53.0625 1.38107 50.4054 2.22637 47.8196L13.1366 14.4446Z"/>
+                        </svg>                            
+                    </div>
+                </div>
+            </div>
+            <hr width="25%">
+            <div class="measurementstxt"><h>Measurements</h></div>
+            <div class="inputs">
+                <div class="input1">
+                    <input placeholder>
+                    <input placeholder>
+                    <input placeholder>
+                </div>
+            </div>
+            <hr width="10%">
+            <div class="mode">
+                <div class="modetxt">Mode</div>
+                <div class="perimeter sel active">Perimeter</div>
+                <div class="area sel">Area</div>
+            </div>
+            <div class="unitcont">
+                <div class="unit">
+                    <div>Unit</div>
+                    <select class="unitsel">
+                        <optgroup label="Units">
+                            <option>mm</option>
+                            <option>cm</option>
+                            <option>m</option>
+                            <option>km</option>
+                        </optgroup>
+                        <optgroup label="Etc">
+                            <option>nm</option>
+                            <option>pm</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <hr width="10%">
+            <div class="calccont">
+                <div class="calcbtn">
+                    <svg width="64" height="64" viewBox="0 0 64 64" stroke="white" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="4" y1="19" x2="60" y2="19" stroke-width="8" stroke-linecap="round"/>
+                        <line x1="4" y1="43" x2="60" y2="43" stroke-width="8" stroke-linecap="round"/>
+                    </svg>                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="toolbar">
+    <div class="feedback">  
+        <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.9375 14.625C4.9375 12.4159 6.72836 10.625 8.9375 10.625H55.0625C57.2716 10.625 59.0625 12.4159 59.0625 14.625V43.1575C59.0625 45.3667 57.2716 47.1575 55.0625 47.1575H14.8579C13.4701 47.1575 12.1815 47.8769 11.4531 49.0581L6.7887 56.6228C6.25972 57.4806 4.9375 57.1058 4.9375 56.0979V41.7936V14.625Z" fill="#FFC555"/>
+            <line x1="11.875" y1="16.375" x2="50.5" y2="16.375" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            <path d="M11.875 38.5H43.875" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            <line x1="11.875" y1="30.5" x2="50.5" y2="30.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
+            <path d="M11.875 23.125H36.5" stroke="black" stroke-width="3" stroke-linecap="round"/>
+        </svg>                   
+    </div>
+    <div class="shortcuts">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="1.0625" y="12.75" width="61.875" height="34.625" rx="3" fill="#222222"/><rect x="12.125" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="35.75" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="27.375" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="53.25" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="44.125" y="16.625" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="35.75" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="27.375" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="53.25" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="44.125" y="38.875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="35.75" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="27.375" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="53.25" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="44.125" y="31.1875" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="35.75" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="27.375" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="12.125" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="4.5" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="19.75" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="53.25" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/><rect x="44.125" y="23.5" width="4.875" height="4.875" rx="1" fill="#ECECEC"/></svg>
+    </div>
+</div>
+
+<div class="shortcut-list">
+    <h>Shortcuts</h>
+</div>
+
+<div class="label"></div>
+<div class="preview">
+    Shape Preview In cm (BETA)
+    <h class="refresh">[REFRESH]</h>
+    <div class="shapeprev">
+        
+    </div>
+</div>
+
+</body>
+</html>
