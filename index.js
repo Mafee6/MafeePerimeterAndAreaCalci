@@ -395,7 +395,7 @@ feedback.addEventListener("click", () =>{
             console.log(await r.text());
             alert("Feedback Sent!");
         }).catch(er => {
-            console.log(er);
+            console.error(er);
             alert("An error occured while sending your feedback :(");
         })
     } else {
