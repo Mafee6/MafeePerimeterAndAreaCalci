@@ -72,11 +72,6 @@ shortcut("Shortcuts", "/", () => {
     shortcutlist.style.display = "block";
 })
 
-shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
-    shapeprev.style.display = "none";
-    shortcutlist.style.display = "none";
-})
-
 let curunit = unitsel.selectedIndex;
 shortcut("Next Unit", "u", () => {
     if(curunit >= unitsel.querySelectorAll("option").length) {
@@ -91,10 +86,15 @@ shortcut("Next Unit", "u", () => {
                 calcbtn.click();
             }
         }));
-
+        
         unitsel.focus();
     }
 });
+
+shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
+    shapeprev.style.display = "none";
+    shortcutlist.style.display = "none";
+})
 
 console.log(`[!] Shortcuts JS loaded.`);
 
