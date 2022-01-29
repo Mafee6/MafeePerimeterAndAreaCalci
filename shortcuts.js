@@ -101,7 +101,7 @@ shortcut("Toggle Autocalc", "t", () => {
     }
 });
 
-shortcut("Github", "g", () => {
+shortcut("Open Github", "g", () => {
     githubbtn.click();
 });
 
