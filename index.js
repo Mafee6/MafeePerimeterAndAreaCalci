@@ -408,15 +408,28 @@ feedback.addEventListener("mouseleave", () => hidelbl());
 const shortcutlist = document.querySelector(".shortcut-list");
 const shorcutsbtn = document.querySelector(".shortcuts");
 
-shorcutsbtn.addEventListener("mouseenter", () => showlbl(feedback, "List all keyboard shortcuts!"));
+shorcutsbtn.addEventListener("mouseenter", () => showlbl(shorcutsbtn, "List all keyboard shortcuts!"));
 shorcutsbtn.addEventListener("mouseleave", () => hidelbl());
+
+const githubbtn = document.querySelector(".github");
+
+githubbtn.addEventListener("mouseenter", () => showlbl(githubbtn, "List all keyboard shortcuts!"));
+githubbtn.addEventListener("mouseleave", () => hidelbl());
 
 shortcutlist.style.display = "none";
 shorcutsbtn.addEventListener("click", () => {
     shortcutlist.style.display = "block";
 });
 
+githubbtn.addEventListener("click", () => {
+    location.href = "https://github.com/Mafee6/MafeePerimeterAndAreaCalci";
+});
+
 window.addEventListener("load", () => shr());
 
 setInterval(hidelbl, 800);
 
+try {
+    eval(atob("Y29uc29sZS5sb2coYXRvYignVkhKNWFXNW5JSFJ2SUhsdmFXNXJJSE52YldVZ1kyOWtaVDhnU1hSeklHVmhjMmxsY2lCb1pYSmxJQzBnYUhSMGNITTZMeTluYVhSb2RXSXVZMjl0TDAxaFptVmxOaTlOWVdabFpWQmxjbWx0WlhSbGNrRnVaRUZ5WldGRFlXeGphU0VvWTI5d2VYSnBaMmgwWldRcENtbG1JSGx2ZFNCbWFXNWtJR0Z1ZVNCaWRXZHpJSGx2ZFNCallXNGdjbVZ3YjNKMElHbDBJR2hsY21VNklHaDBkSEJ6T2k4dloybDBhSFZpTG1OdmJTOU5ZV1psWlRZdlRXRm1aV1ZRWlhKcGJXVjBaWEpCYm1SQmNtVmhRMkZzWTJrdmFYTnpkV1Z6SVE9PScpKQ=="));
+    // yes a secret code..
+} catch {console.log("Github: https://github.com/Mafee6/MafeePerimeterAndAreaCalci")}

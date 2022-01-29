@@ -336,8 +336,18 @@ hr {
     margin-right: 10px
 }
 
+.github {
+    cursor: pointer;
+}
+
+.github svg {
+    width: 48px;
+    height: 48px;
+}
+
 .shortcuts {
     cursor: pointer;
+    margin-right: 10px
 }
 
 .shortcut-list {
