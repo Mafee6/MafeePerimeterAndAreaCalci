@@ -91,11 +91,6 @@ shortcut("Next Unit", "u", () => {
     }
 });
 
-shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
-    shapeprev.style.display = "none";
-    shortcutlist.style.display = "none";
-})
-
 shortcut("Toggle Autocalc", "t", () => {
     if(autocalc) {
         autocalc = false;
@@ -105,6 +100,15 @@ shortcut("Toggle Autocalc", "t", () => {
         alert(`AutoCalc set to ${autocalc}`);
     }
 });
+
+shortcut("Github", "g", () => {
+    githubbtn.click();
+});
+
+shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
+    shapeprev.style.display = "none";
+    shortcutlist.style.display = "none";
+})
 
 console.log(`[!] Shortcuts JS loaded.`);
 
