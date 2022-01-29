@@ -1,4 +1,4 @@
-# MafeePerimeterAndAreaCalci
+# MafeePerimeterAndAreaCalculator
 Mafee Perimeter And Area Calculator, an updated verison of my first website: Mafee Perimeter and area calci 1.0!
 
 #### Welcome to the official github for Mafee Perimeter And Area Calculator!
