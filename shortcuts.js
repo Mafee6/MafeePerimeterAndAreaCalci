@@ -96,13 +96,22 @@ shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
     shortcutlist.style.display = "none";
 })
 
+shortcut("Toggle Autocalc", "t", () => {
+    if(autocalc) {
+        autocalc = false;
+        alert(`AutoCalc set to ${autocalc}`);
+    } else {
+        autocalc = true;
+        alert(`AutoCalc set to ${autocalc}`);
+    }
+});
+
 console.log(`[!] Shortcuts JS loaded.`);
 
 inputs.map(i => {
     i.addEventListener("keyup", (e) => {
         if(e.key.toLowerCase() == "enter"){
             calcbtn.click();
-            inputs.map(x => x.value = "");
             e.preventDefault();
         }
 
