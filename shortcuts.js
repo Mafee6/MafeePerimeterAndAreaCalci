@@ -105,8 +105,13 @@ shortcut("Open Github", "g", () => {
     githubbtn.click();
 });
 
+shortcut("Open Shape Preview", "p", () => {
+    refreshShapePreview();
+    shapeprev.parentElement.style.display = "block";
+});
+
 shortcut("Close Shortcut List / ShapePreview", "Escape",  () => {
-    shapeprev.style.display = "none";
+    shapeprev.parentElement.style.display = "none";
     shortcutlist.style.display = "none";
 })
 

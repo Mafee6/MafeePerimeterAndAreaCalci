@@ -337,11 +337,6 @@ const refreshShapePreview = () => {
     }
 };
 
-output.addEventListener("click", (e) => {
-    refreshShapePreview();
-    shapeprev.parentElement.style.display = "block";
-});
-
 shapeprev.addEventListener("click", (e) => {
     if(e.target.className == "refresh"){
         shapeprev.parentElement.style.display = "block";
